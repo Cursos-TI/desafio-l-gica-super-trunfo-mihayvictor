@@ -4,8 +4,10 @@
 // Tema 2 - Comparação das Cartas
 
 int main() {
-    int opcao;
+
     // Área para definição das variáveis para armazenar as propriedades das cidades
+    int opcao;
+
     char estado_1[20], codigo_carta_1[4], cidade_1[20];
     unsigned long int populacao_1;
     int n_pontos_turisticos_1;
@@ -74,72 +76,92 @@ int main() {
         printf("Carta 1: %s - %s\n", cidade_1, estado_1);
         printf("Carta 2: %s - %s\n", cidade_2, estado_2);
         break;
+
     case 2:
         printf("Atributo: População\n");
         printf("Carta 1 - %s (%s): %lu habitantes\n", cidade_1, estado_1, populacao_1);
         printf("Carta 2 - %s (%s): %lu habitantes\n", cidade_2, estado_2, populacao_2);
-        if (populacao_1 > populacao_2)
-        {
+        
+        if (populacao_1 > populacao_2){
             printf("Carta 1 - %s (%s) tem maior população.\n", cidade_1, estado_1);
             printf("Carta 1 venceu!\n");
             
+        }else if (populacao_1 == populacao_2){
+            printf("Empate!\n");
+
         }else{
             printf("Carta 2 - %s (%s) tem maior população.\n", cidade_2, estado_2);
             printf("Carta 2 venceu!\n");
         }
         break;
+
     case 3:
         printf("Atributo: Área\n");
         printf("Carta 1 - %s (%s): %.2f Km²\n", cidade_1, estado_1, area_1);
         printf("Carta 2 - %s (%s): %.2f Km²\n", cidade_2, estado_2, area_2);
-        if (area_1 > area_2)
-        {
+        
+        if (area_1 > area_2){
             printf("Carta 1 - %s (%s) tem maior área.\n", cidade_1, estado_1);
             printf("Carta 1 venceu!\n");
-        }else
-        {
+        
+        }else if (area_1 == area_2){
+            printf("Empate!\n");
+
+        }else{
             printf("Carta 2 - %s (%s) tem maior área.\n", cidade_2, estado_2);
             printf("Carta 2 venceu!\n");
         }
         break;
+
     case 4:
         printf("Atributo: PIB\n");
         printf("Carta 1 - %s (%s): %.2f bilhões de reais\n", cidade_1, estado_1, pib_1);
         printf("Carta 2 - %s (%s): %.2f bilhões de reais\n", cidade_2, estado_2, pib_2);
-        if (pib_1 > pib_2)
-        {
+        
+        if (pib_1 > pib_2){
             printf("Carta 1 - %s (%s) tem maior PIB.\n", cidade_1, estado_1);
             printf("Carta 1 venceu!\n");
-        }else
-        {
+        
+        }else if (pib_1 == pib_2){
+            printf("Empate!\n");
+
+        }else{
             printf("Carta 2 - %s (%s) tem maior PIB.\n", cidade_2, estado_2);
             printf("Carta 2 venceu!\n");
         }
         break;
+
     case 5:
         printf("Atributo: Número de pontos turísticos\n");
         printf("Carta 1 - %s (%s): %d pontos turísticos\n", cidade_1, estado_1, n_pontos_turisticos_1);
         printf("Carta 2 - %s (%s): %d pontos turísticos\n", cidade_2, estado_2, n_pontos_turisticos_2);
-        if (n_pontos_turisticos_1 > n_pontos_turisticos_2)
-        {
+        
+        if (n_pontos_turisticos_1 > n_pontos_turisticos_2){
             printf("Carta 1 - %s (%s) tem mais pontos turísticos.\n", cidade_1, estado_1);
             printf("Carta 1 venceu!\n");
-        }else
-        {
+
+        }else if (n_pontos_turisticos_1 == n_pontos_turisticos_2){
+            printf("Empate!\n");
+
+        }else{
             printf("Carta 2 - %s (%s) tem mais pontos turísticos.\n", cidade_2, estado_2);
             printf("Carta 2 venceu!\n");
         }
         break;
+
     case 6:
         printf("Atributo: Densidade populacional\n");
         printf("Carta 1 - %s (%s): %.2f hab/km²\n", cidade_1, estado_1, densidade_pop_1);
         printf("Carta 2 - %s (%s): %.2f hab/km²\n", cidade_2, estado_2, densidade_pop_2);
-        if (densidade_pop_1 < densidade_pop_2)
-        {
+        
+        if (densidade_pop_1 < densidade_pop_2){
             printf("Carta 1 - %s (%s) tem menor densidade populacional.\n", cidade_1, estado_1);
             printf("Carta 1 venceu!\n");
-        }else
-        {
+
+        }else if (densidade_pop_1 == densidade_pop_2){
+            printf("Empate!\n");
+
+        }else{
             printf("Carta 2 - %s (%s) tem menor densidade populacional.\n", cidade_2, estado_2);
             printf("Carta 2 venceu!\n");
         }
@@ -148,6 +170,7 @@ int main() {
     default:
     printf("Opção invalída!\n");
         break;
+
     }
     
     return 0;
